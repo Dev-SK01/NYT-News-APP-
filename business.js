@@ -1,7 +1,7 @@
 //  ------------------ global Declarations ------------- 
 
 const homeApiKey = '0f4pphG1TGjdlqwc6eqZIVDXaqFOApGh';
-const HomeDiv = document.querySelector('.home-news-section');
+const HomeDiv = document.querySelector('.business-news-section');
 
 
 
@@ -9,7 +9,7 @@ const HomeDiv = document.querySelector('.home-news-section');
 // ---------------- Functions --------------- 
 
 async function  FetchHome(apiKey){
-    const home = await fetch(`https://api.nytimes.com/svc/topstories/v2/home.json?api-key=${homeApiKey}`) ;
+    const home = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/business.json?api-key=${homeApiKey}`) ;
 
     const homeResponse = await home.json();
     console.log(homeResponse);

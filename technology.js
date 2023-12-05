@@ -1,7 +1,7 @@
 //  ------------------ global Declarations ------------- 
 
 const techKey = '0f4pphG1TGjdlqwc6eqZIVDXaqFOApGh';
-const technology = document.querySelector('.technology-section');
+const technology = document.querySelector('.technology-news-section');
 
 
 
@@ -9,7 +9,7 @@ const technology = document.querySelector('.technology-section');
 // ---------------- Functions --------------- 
 
 async function  FetchTechnology(apiKey){
-    const home = await fetch(`https://api.nytimes.com/svc/topstories/v2/technology.json?api-key=${techKey}`) ;
+    const home = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/technology.json?api-key=${techKey}`) ;
 
     const homeResponse = await home.json();
     console.log(homeResponse);

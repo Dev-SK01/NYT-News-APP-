@@ -1,0 +1,85 @@
+/* google FOnts Link */
+@import url('https://fonts.googleapis.com/css2?family=Dhurjati&family=Noto+Serif:ital,wght@0,400;0,600;1,300&family=Rubik+Bubbles&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* root Css */
+:root {
+    --bg-color: #e2dcf9;
+    --primary-color: #fff;
+    --secandary-color: #173e9e;
+    --call-to-action: #fa741d;
+}
+
+
+/* body CSS */
+body {
+    background-color: var(--bg-color) !important;
+
+}
+
+/* main NavBar Css */
+.main-navbar {
+    text-align: center !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding-top: 1.5rem;
+}
+
+.navbar {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50px;
+    background-color: var(--primary-color);
+    box-shadow: 0px 0px 100px -14px rgba(0, 0, 0, 0.1);
+    width: 75% !important;
+    height: 3.5rem !important;
+    margin-bottom: .78rem;
+    margin-top: 3rem;
+    position: fixed !important;
+}
+
+.main-navbar .brand-name {
+    font-family: 'Rubik Bubbles';
+    font-size: 1.5rem;
+}
+
+
+/* topics-container CSS */
+.topics-container::-webkit-scrollbar{
+    display: none;
+}
+
+.topics-div {
+    display: flex;
+    text-align: center;
+    overflow-y: scroll;
+    scrollbar-width: 0px !important;
+    scrollbar-color: white;
+    margin-top: 4rem;
+    height: 40px;
+}
+
+.topics-div a {
+    text-decoration: none;
+    color: var(--call-to-action);
+    font-family: 'Dhurjati';
+    font-size: 1.2rem;
+}
+
+.item-topic p {
+    background-color: var(--primary-color);
+    border: 1px solid var(--call-to-action) ;
+    border-radius: 25px;
+    width:8rem;
+    margin-left:5px;
+    text-align: center;
+
+}

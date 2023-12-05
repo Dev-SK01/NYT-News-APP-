@@ -1,7 +1,7 @@
 //  ------------------ global Declarations ------------- 
 
 const timesWireKey = '0f4pphG1TGjdlqwc6eqZIVDXaqFOApGh';
-const timesWireDiv = document.querySelector('.times-wire-section');
+const timesWireDiv = document.querySelector('.world-news-section');
 
 
 
@@ -9,7 +9,7 @@ const timesWireDiv = document.querySelector('.times-wire-section');
 // ---------------- Functions --------------- 
 
 async function  FetchTimesWireData(apiKey){
-    const timesWireApi = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/all.json?api-key=${timesWireKey}`) ;
+    const timesWireApi = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/world.json?api-key=${timesWireKey}`) ;
 
     const timeWireResponse = await timesWireApi.json();
     console.log(timeWireResponse)
