@@ -1,7 +1,7 @@
 //  ------------------ global Declarations ------------- 
 
 const techKey = '0f4pphG1TGjdlqwc6eqZIVDXaqFOApGh';
-const technology = document.querySelector('.technology-news-section');
+const technology = document.querySelector('.technology-news-section .news-overflow');
 
 
 
@@ -33,8 +33,8 @@ function constructTechnologyResponseData(response){
     const link = article.url;
     const published_date = article.published_date;
     const abstract = article.abstract;
-    const location = article.geo_facet;
-    const image =  article.multimedia[1];
+    const location = article.des_facet[0];
+    const image =  article.multimedia[0];
     const imageUrl = image.url;
     const caption = image.caption;
     const height = image.height;
@@ -61,10 +61,90 @@ function constructTechnologyResponseData(response){
 }
 
 function technologyDataIntoBody(returnData){
-// getting whole Constructed news Data 
-const p = document.createElement('p');
-p.textContent= returnData[2]; 
- technology.append(p);
+ // getting whole Constructed news Data
+  // const p = document.createElement('p');
+  // p.textContent= returnData[2];
+  //  timesWireDiv.append(p);
+
+  if (returnData[4] == "") {
+    technology.innerHTML += `
+<!-- news container  -->
+        <div
+          class="news-container col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"
+        >
+          <div class="extra-details">
+            <p class="location">${returnData[5]}</p>
+            <p class="date">${returnData[3].slice(11, 19)}</p>
+          </div>
+          <!-- News-Image Div -->
+          <div
+            class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 news-details"
+          >
+            <!-- news-details div -->
+            <div class="news-data">
+              <img
+                src="${returnData[6]}"
+                alt="${returnData[7]}"
+                class="img-thumbnail news-img"
+              />
+              <p class="title">
+              ${returnData[2]}
+              </p>
+            </div>
+            <p class="abstract">
+            ${returnData[2]}
+            </p>
+          </div>
+          <div class="btn-more">
+            <a
+              href="${returnData[1]}"
+            >
+              <p>Expolre</p>
+            </a>
+          </div>
+        </div>
+
+`;
+  } else {
+    technology.innerHTML += `
+<!-- news container  -->
+        <div
+          class="news-container col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"
+        >
+          <div class="extra-details">
+            <p class="location">${returnData[5]}</p>
+            <p class="date">${returnData[3].slice(11, 19)}</p>
+          </div>
+          <!-- News-Image Div -->
+          <div
+            class=" col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12 news-details"
+          >
+            <!-- news-details div -->
+            <div class="news-data">
+              <img
+                src="${returnData[6]}"
+                alt="${returnData[7]}"
+                class="img-thumbnail news-img"
+              />
+              <p class="title">
+              ${returnData[2]}
+              </p>
+            </div>
+            <p class="abstract">
+            ${returnData[4]}
+            </p>
+          </div>
+          <div class="btn-more">
+            <a
+              href="${returnData[1]}"
+            >
+              <p>Expolre</p>
+            </a>
+          </div>
+        </div>
+
+`;
+  }
 
 }
 
