@@ -120,7 +120,8 @@ body {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     margin: auto;
-    border-radius: 15px 4px 15px 4px;
+    border-radius: 10px 25px;
+    border: .2px var(--secandary-color) solid;
     padding-top: .2rem;
 }
 
