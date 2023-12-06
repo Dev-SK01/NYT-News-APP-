@@ -1,24 +1,24 @@
 //  ------------------ global Declarations ------------- 
 
-const networkKey = '0f4pphG1TGjdlqwc6eqZIVDXaqFOApGh';
-const network = document.querySelector('.network-news-section .news-overflow');
+const bookKey = '0f4pphG1TGjdlqwc6eqZIVDXaqFOApGh';
+const book = document.querySelector('.book-news-section .news-overflow');
 
 
 
 
 // ---------------- Functions --------------- 
 
-async function  Fetchnetwork(apiKey){
-    const home = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/learning-network.json?api-key=${networkKey}`) ;
+async function  Fetchbook(apiKey){
+    const home = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/books.json?api-key=${apiKey}`) ;
 
     const homeResponse = await home.json();
     console.log(homeResponse);
-    constructnetworkResponseData(homeResponse);
+    constructbookResponseData(homeResponse);
    
 }
 
 
-function constructnetworkResponseData(response){
+function constructbookResponseData(response){
      const result = response.results;
     //  console.log(result);
 
@@ -48,7 +48,7 @@ function constructnetworkResponseData(response){
 
     // calling the constructed data function
 
-      networkDataIntoBody(returnData);
+      bookDataIntoBody(returnData);
     
     }
 
@@ -60,14 +60,14 @@ function constructnetworkResponseData(response){
 
 }
 
-function networkDataIntoBody(returnData){
+function bookDataIntoBody(returnData){
  // getting whole Constructed news Data
   // const p = document.createElement('p');
   // p.textContent= returnData[2];
   //  timesWireDiv.append(p);
 
   if (returnData[4] == "") {
-    network.innerHTML += `
+    book.innerHTML += `
 <!-- news container  -->
         <div
           class="news-container col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"
@@ -106,7 +106,7 @@ function networkDataIntoBody(returnData){
 
 `;
   } else {
-    network.innerHTML += `
+    book.innerHTML += `
 <!-- news container  -->
         <div
           class="news-container col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"
@@ -149,7 +149,7 @@ function networkDataIntoBody(returnData){
 }
 
 
-Fetchnetwork(networkKey);
+Fetchbook(bookKey);
 
 
 

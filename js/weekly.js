@@ -1,24 +1,28 @@
 //  ------------------ global Declarations ------------- 
 
-const bookKey = '0f4pphG1TGjdlqwc6eqZIVDXaqFOApGh';
-const book = document.querySelector('.book-news-section .news-overflow');
+const weeklyKey = 'QvTUnguAYJjQdJnSZmMk2oisuEWHibjU';
+const WeeklyNews = document.querySelector('.weekly-news-section .news-overflow');
 
 
 
 
 // ---------------- Functions --------------- 
 
-async function  Fetchbook(apiKey){
-    const home = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/book.json?api-key=${bookKey}`) ;
+async function  FetchWeeklyNews(apiKey){
+  
+    const home = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/times insider.json?api-key=${apiKey}`) ;
 
     const homeResponse = await home.json();
     console.log(homeResponse);
-    constructbookResponseData(homeResponse);
+    constructWeeklyNewsResponseData(homeResponse);
+ 
+  
+    
    
 }
 
 
-function constructbookResponseData(response){
+function constructWeeklyNewsResponseData(response){
      const result = response.results;
     //  console.log(result);
 
@@ -48,7 +52,7 @@ function constructbookResponseData(response){
 
     // calling the constructed data function
 
-      bookDataIntoBody(returnData);
+      WeeklyNewsDataIntoBody(returnData);
     
     }
 
@@ -60,14 +64,14 @@ function constructbookResponseData(response){
 
 }
 
-function bookDataIntoBody(returnData){
+function WeeklyNewsDataIntoBody(returnData){
  // getting whole Constructed news Data
   // const p = document.createElement('p');
   // p.textContent= returnData[2];
   //  timesWireDiv.append(p);
 
   if (returnData[4] == "") {
-    book.innerHTML += `
+    WeeklyNews.innerHTML += `
 <!-- news container  -->
         <div
           class="news-container col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"
@@ -106,7 +110,7 @@ function bookDataIntoBody(returnData){
 
 `;
   } else {
-    book.innerHTML += `
+    WeeklyNews.innerHTML += `
 <!-- news container  -->
         <div
           class="news-container col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-12"
@@ -149,7 +153,4 @@ function bookDataIntoBody(returnData){
 }
 
 
-Fetchbook(bookKey);
-
-
-
+FetchWeeklyNews(weeklyKey);

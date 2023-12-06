@@ -9,11 +9,17 @@ const Money = document.querySelector('.money-news-section .news-overflow');
 // ---------------- Functions --------------- 
 
 async function  FetchMoney(apiKey){
-    const home = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/your-money.json?api-key=${moneyKey}`) ;
+  try{
+    const home = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/your money.json?api-key=${apiKey}`) ;
 
     const homeResponse = await home.json();
     console.log(homeResponse);
     constructMoneyResponseData(homeResponse);
+  }
+  catch(err){
+    console.warn(err);
+  }
+   
    
 }
 
