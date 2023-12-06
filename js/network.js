@@ -17,8 +17,14 @@ async function  Fetchnetwork(apiKey){
     constructnetworkResponseData(homeResponse);
   }
 
-  catch (err){
-    console.warn(err);
+  catch(err){
+    network.innerHTML =`
+    <div class="error">
+    <p>
+    ${err}
+    </p>
+    </div>
+    `
   }
     
    

@@ -17,8 +17,14 @@ async function  FetchBrand(apiKey){
     constructBrandResponseData(homeResponse);
   }
 
-  catch (err){
-    console.warn(err);
+  catch(err){
+    Brand.innerHTML =`
+    <div class="error">
+    <p>
+    ${err}
+    </p>
+    </div>
+    `
   }
     
    
@@ -182,8 +188,14 @@ async function  FetchHealth(apiKey){
     constructHealthResponseData(homeResponse);
   }
 
-  catch (err){
-    console.warn(err);
+  catch(err){
+    technology.innerHTML =`
+    <div class="error">
+    <p>
+    ${err}
+    </p>
+    </div>
+    `
   }
     
    

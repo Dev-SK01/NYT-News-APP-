@@ -17,8 +17,14 @@ async function  FetchSmarterLiving(apiKey){
     constructSmarterLivingResponseData(homeResponse);
   }
 
-  catch (err){
-    console.warn(err);
+  catch(err){
+    SmarterLiving.innerHTML =`
+    <div class="error">
+    <p>
+    ${err}
+    </p>
+    </div>
+    `
   }
     
    
@@ -182,8 +188,14 @@ async function  FetchJobMarket(apiKey){
     constructJobMarketResponseData(homeResponse);
   }
 
-  catch (err){
-    console.warn(err);
+  catch(err){
+    JobMarket.innerHTML =`
+    <div class="error">
+    <p>
+    ${err}
+    </p>
+    </div>
+    `
   }
     
    
@@ -357,8 +369,14 @@ async function  FetchTravel(apiKey){
     constructTravelResponseData(homeResponse);
   }
 
-  catch (err){
-    console.warn(err);
+  catch(err){
+    Travel.innerHTML =`
+    <div class="error">
+    <p>
+    ${err}
+    </p>
+    </div>
+    `
   }
     
    

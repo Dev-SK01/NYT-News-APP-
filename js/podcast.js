@@ -17,8 +17,14 @@ async function  Fetchpodcast(apiKey){
     constructpodcastResponseData(homeResponse);
   }
 
-  catch (err){
-    console.log(err);
+  catch(err){
+    podcast.innerHTML =`
+    <div class="error">
+    <p>
+    ${err}
+    </p>
+    </div>
+    `
   }
     
    

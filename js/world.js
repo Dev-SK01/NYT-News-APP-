@@ -1,6 +1,6 @@
 //  ------------------ global Declarations -------------
 
-const timesWireKey = "0f4pphG1TGjdlqwc6eqZIVDXaqFOApGh";
+const timesWireKey = "QvTUnguAYJjQdJnSZmMk2oisuEWHibjU";
 const timesWireDiv = document.querySelector(
   ".world-news-section .news-overflow"
 );
@@ -8,8 +8,10 @@ const timesWireDiv = document.querySelector(
 // ---------------- Functions ---------------
 
 async function FetchTimesWireData(apiKey) {
+  try{
+
   const timesWireApi = await fetch(
-    `https://api.nytimes.com/svc/news/v3/content/all/world.json?api-key=${timesWireKey}`
+    `https://api.nytimes.com/svc/news/v3/content/all/world.json?api-key=${apiKey}`
   );
 
   const timeWireResponse = await timesWireApi.json();
@@ -19,6 +21,17 @@ async function FetchTimesWireData(apiKey) {
   // timeWireResponse.results.forEach(news => {
   //     console.log(news);
   // });
+  }
+
+  catch(err){
+    timesWireDiv.innerHTML =`
+    <div class="error">
+    <p>
+    ${err}
+    </p>
+    </div>
+    `
+  }
 }
 
 function constructResponseData(response) {

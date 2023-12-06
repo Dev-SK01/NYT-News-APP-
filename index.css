@@ -69,10 +69,15 @@ body {
 
 
 /* topics-container CSS */
-.topics-container::-webkit-scrollbar {
-    display: none;
-    width: 0;
+.topics-div::-webkit-scrollbar {
+   width: 2px;
+   height: 2px;
 }
+
+.topics-div::-webkit-scrollbar-thumb {
+    background-color: var(--secandary-bg);
+   
+  }
 
 
 .topics-div {
@@ -133,6 +138,16 @@ body {
     display: flex;
     overflow-x: scroll;
 }
+
+/* customizing the scrollbar */
+.news-overflow::-webkit-scrollbar {
+    height: 3.5px;
+ }
+ 
+ .news-overflow::-webkit-scrollbar-thumb {
+     background-color: var(--secandary-bg);
+    
+   }
 
 .news-container {
     position: relative;
@@ -256,4 +271,10 @@ body {
     100% {
         transform: translateX(100%);
     }
+}
+
+/* error CSS */
+
+.error p{
+    font-family: var(--font-primary);
 }

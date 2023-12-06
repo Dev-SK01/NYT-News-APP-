@@ -1,6 +1,6 @@
 //  ------------------ global Declarations ------------- 
 
-const moneyKey = '0f4pphG1TGjdlqwc6eqZIVDXaqFOApGh';
+const moneyKey = 'Bd4cwqptNBvnEJ2A4qtXiym8pRid4z9M';
 const Money = document.querySelector('.money-news-section .news-overflow');
 
 
@@ -17,7 +17,13 @@ async function  FetchMoney(apiKey){
     constructMoneyResponseData(homeResponse);
   }
   catch(err){
-    console.warn(err);
+    Money.innerHTML =`
+    <div class="error">
+    <p>
+    ${err}
+    </p>
+    </div>
+    `
   }
    
    

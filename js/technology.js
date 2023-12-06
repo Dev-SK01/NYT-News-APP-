@@ -9,11 +9,23 @@ const technology = document.querySelector('.technology-news-section .news-overfl
 // ---------------- Functions --------------- 
 
 async function  FetchTechnology(apiKey){
-    const home = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/technology.json?api-key=${techKey}`) ;
+try{
+  const home = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/technology.json?api-key=${apiKey}`) ;
 
-    const homeResponse = await home.json();
-    console.log(homeResponse);
-    constructTechnologyResponseData(homeResponse);
+  const homeResponse = await home.json();
+  console.log(homeResponse);
+  constructTechnologyResponseData(homeResponse);
+}
+catch(err){
+  technology.innerHTML =`
+  <div class="error">
+  <p>
+  ${err}
+  </p>
+  </div>
+  `
+}
+    
    
 }
 

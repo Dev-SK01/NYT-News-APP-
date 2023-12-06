@@ -9,6 +9,8 @@ const WeeklyNews = document.querySelector('.weekly-news-section .news-overflow')
 // ---------------- Functions --------------- 
 
 async function  FetchWeeklyNews(apiKey){
+
+  try{
   
     const home = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/times insider.json?api-key=${apiKey}`) ;
 
@@ -16,7 +18,16 @@ async function  FetchWeeklyNews(apiKey){
     console.log(homeResponse);
     constructWeeklyNewsResponseData(homeResponse);
  
-  
+  }
+  catch(err){
+    WeeklyNews.innerHTML =`
+    <div class="error">
+    <p>
+    ${err}
+    </p>
+    </div>
+    `
+  }
     
    
 }

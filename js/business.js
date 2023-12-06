@@ -9,11 +9,22 @@ const HomeDiv = document.querySelector('.business-news-section .news-overflow');
 // ---------------- Functions --------------- 
 
 async function  FetchHome(apiKey){
-    const home = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/business.json?api-key=${homeApiKey}`) ;
+  try{
+    const home = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/business.json?api-key=${apiKey}`) ;
 
     const homeResponse = await home.json();
     console.log(homeResponse);
     constructHomeResponseData(homeResponse);
+  }
+  catch(err){
+    HomeDiv.innerHTML =`
+    <div class="error">
+    <p>
+    ${err}
+    </p>
+    </div>
+    `
+  }
    
 }
 

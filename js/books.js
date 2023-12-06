@@ -1,6 +1,6 @@
 //  ------------------ global Declarations ------------- 
 
-const bookKey = '0f4pphG1TGjdlqwc6eqZIVDXaqFOApGh';
+const bookKey = 'tyWhbpibRrrNsNPdTQdT6NPksCqbfXYx';
 const book = document.querySelector('.book-news-section .news-overflow');
 
 
@@ -9,11 +9,22 @@ const book = document.querySelector('.book-news-section .news-overflow');
 // ---------------- Functions --------------- 
 
 async function  Fetchbook(apiKey){
+  try{
     const home = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/books.json?api-key=${apiKey}`) ;
 
     const homeResponse = await home.json();
     console.log(homeResponse);
     constructbookResponseData(homeResponse);
+  }
+  catch(err){
+    book.innerHTML =`
+    <div class="error">
+    <p>
+    ${err}
+    </p>
+    </div>
+    `
+  }
    
 }
 

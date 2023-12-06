@@ -42,6 +42,36 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+
+    <script>
+
+
+      // animation for load Dummy 
+         const load = setTimeout(()=>{
+          var loadDummydiv = document.querySelectorAll('.load-dummy');
+          // console.log(loadDummydiv);
+          loadDummydiv.forEach(()=>{
+            loadDummydiv[0].style.display = 'none';
+            loadDummydiv[1].style.display = 'none';
+            loadDummydiv[2].style.display = 'none';
+            loadDummydiv[3].style.display = 'none';
+            loadDummydiv[4].style.display = 'none';
+            loadDummydiv[5].style.display = 'none';
+            loadDummydiv[6].style.display = 'none';
+            loadDummydiv[7].style.display = 'none';
+            loadDummydiv[8].style.display = 'none';
+            loadDummydiv[9].style.display = 'none';
+            loadDummydiv[10].style.display = 'none';
+            loadDummydiv[11].style.display = 'none';
+            loadDummydiv[12].style.display = 'none';
+              clearInterval(load);
+          })
+         },2300);
+      
+         console.log(load);
+      
+        </script>
+
   </head>
   <body>
     <!-- navbar  -->
@@ -295,31 +325,5 @@
     </div>
   </body>
   <!-- External CDN Scripts -->
-  <script>
-
-
-// animation for load Dummy 
-   const load = setTimeout(()=>{
-    var loadDummydiv = document.querySelectorAll('.load-dummy');
-    // console.log(loadDummydiv);
-    loadDummydiv.forEach(()=>{
-      loadDummydiv[0].style.display = 'none';
-      loadDummydiv[1].style.display = 'none';
-      loadDummydiv[2].style.display = 'none';
-      loadDummydiv[3].style.display = 'none';
-      loadDummydiv[4].style.display = 'none';
-      loadDummydiv[5].style.display = 'none';
-      loadDummydiv[6].style.display = 'none';
-      loadDummydiv[7].style.display = 'none';
-      loadDummydiv[8].style.display = 'none';
-      loadDummydiv[9].style.display = 'none';
-      loadDummydiv[10].style.display = 'none';
-      loadDummydiv[11].style.display = 'none';
-      loadDummydiv[12].style.display = 'none';
-
-    })
-   },1050);
-
-
-  </script>
+  
 </html>
