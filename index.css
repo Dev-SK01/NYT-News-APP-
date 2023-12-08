@@ -116,7 +116,7 @@ body {
 }
 
 .world-news-section h2 {
-    font-family: var(--font-logo);
+    font-family: var(--font-primary);
     color: var(--font-primary-color);
     text-align: center;
     width: 95%;
