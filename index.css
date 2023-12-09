@@ -9,13 +9,16 @@
 }
 
 /* root Css */
-:root {
+/* :root {
     --bg-color: rgb(242, 237, 241);
-    /* #fee7d8  #e2dcf9 */
+   
     --primary-color: #fff;
-    --secandary-color: #a15e8f;
+    --secandary-color:#206a32;
     --call-to-action: #fa741d;
+    --secandary-bg:#d2f1da;
     --padding-inline: .6rem;
+    --font-primary-color: black;
+    --font-secondary-color: #313131;
     --font-600: 600;
     --font-300: 300;
     --font-400: 400;
@@ -23,10 +26,18 @@
     --font-primary: 'Dhurjati';
     --font-secandary: 'Noto+Serif';
     --font-logo: 'Rubik Bubbles';
-    --font-primary-color: black;
-    --font-secondary-color: #313131;
+
+    /* --bg-color: rgb(242, 237, 241);
+     #fee7d8  #e2dcf9 
+    --primary-color: #fff;
+    --secandary-color: #a15e8f;
+    --call-to-action: #fa741d;
     --secandary-bg: #e0c9da;
-}
+    --padding-inline: .6rem;
+    --font-primary-color: black;
+    --font-secondary-color: #313131; 
+
+} */
 
 
 /* body CSS */

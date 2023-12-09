@@ -1,6 +1,6 @@
 //  ------------------ global Declarations ------------- 
 
-const bookKey = 'tyWhbpibRrrNsNPdTQdT6NPksCqbfXYx';
+const bookKey = 'NZhRW3gQMMN8swP6mm1SBbKmfFWY9htG';
 const book = document.querySelector('.book-news-section .news-overflow');
 
 

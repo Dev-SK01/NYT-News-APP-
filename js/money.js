@@ -1,6 +1,6 @@
 //  ------------------ global Declarations ------------- 
 
-const moneyKey = 'Bd4cwqptNBvnEJ2A4qtXiym8pRid4z9M';
+const moneyKey = 'NZhRW3gQMMN8swP6mm1SBbKmfFWY9htG';
 const Money = document.querySelector('.money-news-section .news-overflow');
 
 

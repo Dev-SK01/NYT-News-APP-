@@ -1,6 +1,6 @@
 //  ------------------ global Declarations ------------- 
 
-const podcastkey = 'Bd4cwqptNBvnEJ2A4qtXiym8pRid4z9M';
+const podcastkey = 'NZhRW3gQMMN8swP6mm1SBbKmfFWY9htG';
 const podcast = document.querySelector('.podcast-news-section .news-overflow');
 
 
