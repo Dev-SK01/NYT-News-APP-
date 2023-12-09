@@ -9,7 +9,7 @@
 }
 
 /* root Css */
-/* :root {
+:root {
     --bg-color: rgb(242, 237, 241);
    
     --primary-color: #fff;
@@ -35,9 +35,9 @@
     --secandary-bg: #e0c9da;
     --padding-inline: .6rem;
     --font-primary-color: black;
-    --font-secondary-color: #313131; 
+    --font-secondary-color: #313131; */
 
-} */
+}
 
 
 /* body CSS */
