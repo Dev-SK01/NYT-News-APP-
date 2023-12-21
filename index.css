@@ -1,4 +1,4 @@
-/* google FOnts Link */
+/* google Fonts Link */
 @import url('https://fonts.googleapis.com/css2?family=Dhurjati&family=Noto+Serif:ital,wght@0,400;0,600;1,300&family=Rubik+Bubbles&display=swap');
 
 
@@ -26,16 +26,6 @@
     --font-primary: 'Dhurjati';
     --font-secandary: 'Noto+Serif';
     --font-logo: 'Rubik Bubbles';
-
-    /* --bg-color: rgb(242, 237, 241);
-     #fee7d8  #e2dcf9 
-    --primary-color: #fff;
-    --secandary-color: #a15e8f;
-    --call-to-action: #fa741d;
-    --secandary-bg: #e0c9da;
-    --padding-inline: .6rem;
-    --font-primary-color: black;
-    --font-secondary-color: #313131; */
 
 }
 

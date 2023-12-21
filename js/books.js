@@ -38,24 +38,17 @@ function constructbookResponseData(response){
 
     // ----------------- Try Catch Block IF Error Occurs ----------------
     try{
+
     // console.log(article.section);
-    const section = article.section;
-    const title = article.title;
-    const link = article.url;
-    const published_date = article.published_date;
-    const abstract = article.abstract;
+    const {section,title,link,published_date,abstract} = article;
     const location = article.des_facet[0];
     const image =  article.multimedia[0];
-    const imageUrl = image.url;
-    const caption = image.caption;
-    const height = image.height;
-    const width =image.width;
-    const format= image.format;
+    const {url,caption,format,height,width} = image;
     // printing to console 
     // console.table(section,link,title,published_date,abstract,location,image,imageUrl,caption,height,width,format);
 
     // sending one By one Data 
-    returnData = [ section,link,title,published_date,abstract,location,imageUrl,caption,height,width,format] ;
+    returnData = [ section,link,title,published_date,abstract,location,url,caption,height,width,format] ;
 
     // calling the constructed data function
 
@@ -110,7 +103,7 @@ function bookDataIntoBody(returnData){
             <a
               href="${returnData[1]}"
             >
-              <p>Expolre</p>
+              <p>Explore</p>
             </a>
           </div>
         </div>
@@ -149,7 +142,7 @@ function bookDataIntoBody(returnData){
             <a
               href="${returnData[1]}"
             >
-              <p>Expolre</p>
+              <p>Explore</p>
             </a>
           </div>
         </div>
@@ -159,6 +152,7 @@ function bookDataIntoBody(returnData){
 
 }
 
+// Final Function call
 
 Fetchbook(bookKey);
 

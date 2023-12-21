@@ -9,15 +9,20 @@ const Brand = document.querySelector('.brand-news-section .news-overflow');
 // ---------------- Functions --------------- 
 
 async function  FetchBrand(apiKey){
+
   try{
+
+    // Getting response from server
     const home = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/t brand.json?api-key=${apiKey}`) ;
 
     const homeResponse = await home.json();
     console.log(homeResponse);
+    // calling The Response Construction Function
     constructBrandResponseData(homeResponse);
   }
 
   catch(err){
+    // Error Div for Error intimation
     Brand.innerHTML =`
     <div class="error">
     <p>
@@ -30,8 +35,10 @@ async function  FetchBrand(apiKey){
    
 }
 
+// response data Construction function
 
 function constructBrandResponseData(response){
+
      const result = response.results;
     //  console.log(result);
 
@@ -40,7 +47,9 @@ function constructBrandResponseData(response){
 
     // ----------------- Try Catch Block IF Error Occurs ----------------
     try{
-    // console.log(article.section);
+
+  // Getting and assigning the response Object Properties.
+
     const section = article.section;
     const title = article.title;
     const link = article.url;
@@ -53,6 +62,7 @@ function constructBrandResponseData(response){
     const height = image.height;
     const width =image.width;
     const format= image.format;
+
     // printing to console 
     // console.table(section,link,title,published_date,abstract,location,image,imageUrl,caption,height,width,format);
 
@@ -73,11 +83,10 @@ function constructBrandResponseData(response){
 
 }
 
+// Appending the Constructed data Into HTML BODY
+
 function BrandDataIntoBody(returnData){
- // getting whole Constructed news Data
-  // const p = document.createElement('p');
-  // p.textContent= returnData[2];
-  //  timesWireDiv.append(p);
+
 
   if (returnData[4] == "") {
     Brand.innerHTML += `
