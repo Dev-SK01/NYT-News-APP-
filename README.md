@@ -13,9 +13,8 @@ It RealTime Customized News Application.
 
 - In JS File Named to the respective Data the fetch from server.
 
-
-
-
+## Live Link 
+NewsDaMapla [https://dev-sk01.github.io/News-Da-Mapla-App/]
 
 ## API Reference
 
