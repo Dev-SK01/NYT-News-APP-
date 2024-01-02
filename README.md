@@ -1,5 +1,5 @@
 
-# News Da Mapla
+# News Da Mapla V1.0.0
 
 It RealTime Customized News Application. 
 
