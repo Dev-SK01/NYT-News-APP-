@@ -1,0 +1,40 @@
+{
+  "short_name": "News Da Mapla",
+  "name": "RealTime Customized News",
+  "description": "News Da Mapla Is A realtime customized news application",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "https://dev-sk01.github.io/News-Da-Mapla-App/",
+  "display": "standalone",
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "id": "UI V1.0.0",
+  "scope": "https://dev-sk01.github.io/News-Da-Mapla-App/",
+  "lang": "en",
+  "display_override": [
+    "window-controls-overlay",
+    "standalone"
+  ],
+  "shortcuts": [
+    {
+      "name": "NDM HOME",
+      "url": "https://dev-sk01.github.io/News-Da-Mapla-App/#world",
+      "description": "NMD Home"
+    }
+  ],
+  "categories": [
+    "books",
+    "education",
+    "productivity"
+  ]
+}
