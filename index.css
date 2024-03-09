@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+  
 }
 
 /* root Css */
@@ -46,7 +47,18 @@ body {
     z-index: 10;
     position: relative;
 }
-
+.logout {
+    background-color: white;
+    border-radius: 25px;
+    padding-inline:5px;
+    box-shadow: 0px 2px 12px 1px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    right:-2.5rem;
+}
+.logout i{
+    font-weight: bolder;
+    font-size: 1.5rem;
+}
 .navbar {
     display: flex !important;
     align-items: center !important;
@@ -113,7 +125,7 @@ body {
 
 .world-news-section {
     margin-block: var(--margin-block);
-
+    scroll-margin-top:8rem;
 }
 
 .world-news-section h2 {
