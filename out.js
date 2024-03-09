@@ -5,7 +5,7 @@ function logoutUser() {
     // logout the user when user wants
     localStorage.removeItem('NewsDa');
     alert('You Logged Out!');
-    window.location.replace('/index.html');
+    window.location.replace('/News-Da-Mapla-App/index.html');
 };
 
 // logout function
