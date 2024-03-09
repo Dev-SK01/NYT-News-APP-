@@ -66,7 +66,7 @@ function getCredential() {
     if(parsed == null){
      return;
     }else{
-        window.location.replace('/home.html');
+        window.location.replace('/News-Da-Mapla-App/home.html');
     }
 console.log(parsed)
 }
@@ -88,7 +88,7 @@ loginBtn.addEventListener('click', async (event) => {
     } else {
         const LogInstatus = await checkUserLogin(decrypted, BASKET_NAME, name, pass);
         if (LogInstatus) {
-            window.location.replace('/home.html');
+            window.location.replace('/News-Da-Mapla-App/home.html');
         } else {
             alert(`cant't Find You...!`)
         }
